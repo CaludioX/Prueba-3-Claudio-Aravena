@@ -33,7 +33,7 @@ def clasificar_y_exportar_productos():
     # Abre (o crea) el archivo 'clasificacion_productos.txt' en modo escritura
     with open('clasificacion_productos.txt', mode='w') as file:
         # Itera sobre cada categoría y sus productos, escribiéndolos en el archivo de texto
-        for categoria, productos en clasificacion.items():
+        for categoria, productos in clasificacion.items():
             file.write(f"{categoria}:\n")
             for producto in productos:
                 file.write(f"{producto}\n")
